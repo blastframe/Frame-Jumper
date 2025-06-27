@@ -108,7 +108,7 @@ By following these steps, you efficiently use **GP Time Offset Duplicator** to i
 ## Troubleshooting
 
 - **Add-on Not Appearing:**  
-  Double-check that the installation was completed correctly (via Blender Preferences > Add-ons). Also, verify that you’re using a compatible version of Blender.
+  Double-check that the installation was completed correctly (see above).
 
 ## License
 
@@ -122,7 +122,6 @@ Contributions, suggestions, and fixes are welcome! Feel free to fork this reposi
 
 - Special acknowledgement to [**Joel at SketchySquirrel**](https://www.youtube.com/c/SketchySquirrel) for the inspiration and idea behind this add-on, as well as for providing invaluable rigging insights to the Grease Pencil user base.
 - For more details and projects, visit Joel's [GitHub](https://github.com/sketchy-squirrel) repository.
-- Inspired by the need for flexible Grease Pencil editing tools.
 
 ---
 
