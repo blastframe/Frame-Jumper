@@ -134,11 +134,11 @@ def get_debug_mode() -> bool:
 # ------------------------------------------------------------------------
 
 
-class BLASTFRAME_OT_duplicate_time_offset_frame(Operator):
-    """Duplicate the drawing shown by a Time Offset modifier to a new frame."""
+class BLASTFRAME_OT_frame_jumper(Operator):
+    """Jump to a duplicate of the drawing shown by a Time Offset modifier or a blank keyframe."""
 
-    bl_idname = "gp.duplicate_time_offset_frame"
-    bl_label = "Duplicate Time Offset Frame"
+    bl_idname = "gp.frame_jumper"
+    bl_label = "Frame Jumper"
     bl_options = {"REGISTER", "UNDO"}
 
     target_layer_enum: EnumProperty(
@@ -357,7 +357,7 @@ def draw_timeoffset_buttons(self, context):
 
         row = self.layout.row(align=True)
         row.operator(
-            BLASTFRAME_OT_duplicate_time_offset_frame.bl_idname,
+            BLASTFRAME_OT_frame_jumper.bl_idname,
             text="",
             icon="MOD_TIME",
         )
@@ -371,7 +371,7 @@ def draw_timeoffset_buttons(self, context):
         )
 
 
-class BLASTFRAME_OT_duplicate_time_offset_frame_preferences(AddonPreferences):
+class BLASTFRAME_OT_frame_jumper_preferences(AddonPreferences):
     bl_idname = __name__  # Match your add-on id
 
     debug_mode: BoolProperty(
@@ -401,8 +401,8 @@ class BLASTFRAME_OT_duplicate_time_offset_frame_preferences(AddonPreferences):
 # ------------------------------------------------------------------------
 
 classes = (
-    BLASTFRAME_OT_duplicate_time_offset_frame,
-    BLASTFRAME_OT_duplicate_time_offset_frame_preferences,
+    BLASTFRAME_OT_frame_jumper,
+    BLASTFRAME_OT_frame_jumper_preferences,
 )
 
 
