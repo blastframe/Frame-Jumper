@@ -6,9 +6,9 @@
 
 ### What is Frame Jumper?
 
-Sometimes, while you're using that Time Offset modifier, you might want to draw something _new_ without messing up the awesome rigged animation you've already set up with a Time Offset Modifier. That's where the **Frame Jumper** comes in!
+Sometimes, while you're using the Grease Pencil Time Offset modifier, you might want to draw something _new_ without messing up the awesome rigged animation you've already set up with a Time Offset Modifier. That's where the **Frame Jumper** comes in!
 
-Think of it like this: The Time Offset modifier is showing you a specific drawing from your animation. The **Frame Jumper** lets you "step out" of that view for a moment. You can either make a copy of the drawing you see or create a completely blank canvas, and then draw something brand new without changing your existing animation.
+Think of it like this: The Time Offset modifier is showing you a specific drawing from your animation. **Frame Jumper** lets you "step out" of that view for a moment. You can either make a copy of the drawing you see or create a completely blank canvas, and then draw something brand new without changing your existing animation.
 
 ---
 
