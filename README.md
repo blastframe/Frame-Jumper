@@ -1,11 +1,31 @@
 # **GP Time Offset Duplicator**
 
-**GP Time Offset Duplicator** is a Blender add-on designed to duplicate the active Grease Pencil frame that is affected by the Time Offset modifier into a new, editable frame. This non-destructive workflow allows you to preserve the original animation while making precise edits to the duplicated frame.
+**GP Time Offset Duplicator** lets you temporarily step out of the timeline controlled by the Time Offset modifier—either duplicating the displayed frame or creating a blank keyframe—so you can create a new drawing without altering the ongoing keyframed animation.
+
+- **Target an Existing Layer or Create a New One:**  
+  You can choose whether to:
+
+  - **Duplicate the new keyframe on an existing layer,** placing the new drawing right where you want it, or
+  - **Create a new layer** specifically to hold the duplicated (or blank) keyframe, keeping your drawings neatly separated.
+
+- **Duplicate or Create a Blank Keyframe:**  
+  The operator offers two modes:
+
+  - **Duplicate the Active Frame:**  
+    It copies the frame currently referenced by the Time Offset modifier, preserving its drawing data as a starting point.
+  - **Create a Blank Keyframe:**  
+    Alternatively, you can opt to start with a clean slate. In this case, the operator creates a blank keyframe either on the destination layer or—if desired—on the original layer to hide its content. This ensures that the Grease Pencil only shows your new drawing.
+
+- **Quick Re-enable:**  
+  After your new drawing is complete, you can easily re-enable the Time Offset modifier directly from the Dopesheet's Header. This lets you seamlessly return to the keyframed animation with your fresh adjustments integrated.
+
+By offering these options, **GP Time Offset Duplicator** provides a flexible, non-destructive workflow that adapts to your creative needs.
 
 ## Features
 
-- **Duplicate with Ease**: Quickly duplicate an active Grease Pencil frame influenced by a Time Offset modifier.
-- **Non-Destructive Editing**: Work on a duplicated frame without altering the original animation.
+- **Jump Out of Timeline**: Temporarily exit the timeline controlled by the Time Offset modifier to create a new drawing without affecting the keyframed animation.
+- **Duplicate with Ease**: Quickly duplicate the active Grease Pencil frame influenced by the Time Offset modifier—or create a blank keyframe—so you have a new, editable drawing surface.
+- **Quick Re-enable**: Easily re-enable the Time Offset modifier directly from the Dopesheet's Header once your new drawing is complete.
 - **Compatibility**: Designed to work with both Grease Pencil v2 and v3 workflows.
 
 ## Installation
@@ -109,3 +129,11 @@ This will:
 - Push the tag to GitHub so that it appears in the Releases section.
 - Package all repository files into a zip file named `GP Time Offset Duplicator_v1.0.0.zip` for users to download.
 - Move the generated zip file to your Downloads folder.
+
+### Video Tutorial
+
+For a quick overview and demonstration of the add-on in action, watch the video below:
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TUGGjXJURmU?si=RJp_f2hJYCd4mey1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>

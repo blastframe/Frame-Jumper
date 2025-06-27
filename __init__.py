@@ -5,7 +5,7 @@ bl_info = {
     "blender": (3, 6, 0),
     "location": "Dopesheet Header",
     "description": (
-        "Duplicates the active Grease Pencil frame or creates a blank keyframe - based on the frame referenced by the Time Offset modifier - to produce a new, editable frame. "
+        "Duplicates the active Grease Pencil frame or creates a blank keyframe - based on the frame referenced by the Time Offset modifier - to produce a new, editable frame."
     ),
     "category": "Grease Pencil",
 }
