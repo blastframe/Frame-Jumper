@@ -36,6 +36,6 @@ jobs:
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          files: GP\ Time\ Offset\ Duplicator_v*.zip
+          files: GP_Time_Offset_Duplicator_v*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

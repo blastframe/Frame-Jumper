@@ -119,8 +119,8 @@ To create a new release, follow these steps in your repository's root:
 ```bash
 git tag v1.0.0
 git push --tags
-zip -r "GP Time Offset Duplicator_v1.0.0.zip" *
-mv "GP Time Offset Duplicator_v1.0.0.zip" ~/Downloads/
+zip -r "GP_Time_Offset_Duplicator_v1.0.0.zip" *
+mv "GP_Time_Offset_Duplicator_v1.0.0.zip" ~/Downloads/
 ```
 
 This will:
