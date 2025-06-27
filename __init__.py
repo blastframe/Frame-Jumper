@@ -7,6 +7,8 @@ bl_info = {
     "description": (
         "Duplicates the active Grease Pencil frame or creates a blank keyframe - based on the frame referenced by the Time Offset modifier - to produce a new, editable frame."
     ),
+    "doc_url": "https://github.com/blastframe/GP-Time-Offset-Duplicator",
+    "tracker_url": "https://github.com/blastframe/GP-Time-Offset-Duplicator",
     "category": "Grease Pencil",
 }
 
