@@ -1,6 +1,6 @@
-# GP Time Offset Duplicator
+# **GP Time Offset Duplicator**
 
-GP Time Offset Duplicator is a Blender add-on designed to duplicate the active Grease Pencil frame that is affected by the Time Offset modifier into a new, editable frame. This non-destructive workflow allows you to preserve the original animation while making precise edits to the duplicated frame.
+**GP Time Offset Duplicator** is a Blender add-on designed to duplicate the active Grease Pencil frame that is affected by the Time Offset modifier into a new, editable frame. This non-destructive workflow allows you to preserve the original animation while making precise edits to the duplicated frame.
 
 ## Features
 
@@ -10,26 +10,40 @@ GP Time Offset Duplicator is a Blender add-on designed to duplicate the active G
 
 ## Installation
 
-Follow these steps to install the GP Time Offset Duplicator add-on in Blender:
+To install the **GP Time Offset Duplicator** add-on from the released zip file, follow these steps:
 
-1. **Download the Add-on:**
+1. **Download the Add-on Package:**
 
-   - Clone or download this repository from GitHub.
+   - Go to the [Releases](https://github.com/blastframe/GP-Time-Offset-Duplicator/releases) page of this repository.
+   - Download the latest `GP Time Offset Duplicator_vX.Y.Z.zip` file.
 
-   ```bash
-   git clone https://github.com/yourusername/GP-Time-Offset-Duplicator.git
-   ```
-
-2. **Install via Blender Preferences:**
+2. **Open Blender Preferences:**
 
    - Open Blender.
-   - Go to **Edit > Preferences > Add-ons**.
-   - Click on the **Install…** button.
-   - Navigate to the downloaded repository folder and select the `zip` file or the folder containing the add-on.
-   - Enable the add-on by checking the box next to its name.
+   - From the main Blender menu, click on **Edit** and then select **Preferences**.
 
-3. **Verify Installation:**
-   - The add-on should now be visible under the **3D Viewport > Sidebar > GP Time Offset Tools** panel.
+3. **Navigate to the Add-ons Tab:**
+
+   - In the Preferences window, click on the **Add-ons** tab.
+
+4. **Initiate Installation:**
+
+   - At the top right of the Add-ons panel, click the **Install...** button.
+
+5. **Locate the Zip File:**
+
+   - A file browser window will open.
+   - Navigate to the location on your computer where you saved the downloaded zip file.
+
+6. **Select and Install:**
+
+   - Select the zip file and click the **Install Add-on** button in the file browser.
+
+7. **Enable the Add-on:**
+   - Once installed, the add-on will appear in the list.
+   - Enable it by clicking the checkbox next to **GP Time Offset Duplicator**.
+
+You are now ready to use the add-on from the **3D Viewport > Sidebar > GP Time Offset Tools** panel.
 
 ## How to Use
 
@@ -74,10 +88,7 @@ Contributions, suggestions, and fixes are welcome! Feel free to fork this reposi
 ## Acknowledgements
 
 - Special acknowledgement to [**Joel at SketchySquirrel**](https://www.youtube.com/c/SketchySquirrel) for the inspiration and idea behind this add-on, as well as for providing invaluable rigging insights to the Grease Pencil user base.
-- IG: @sketchysquirrelanimation
-- For more details and projects, visit his [GitHub](https://github.com/sketchy-squirrel) repository.
+- For more details and projects, visit Joel's [GitHub](https://github.com/sketchy-squirrel) repository.
 - Inspired by the need for flexible Grease Pencil editing tools.
 
 ---
-
-Happy Grease Penciling!

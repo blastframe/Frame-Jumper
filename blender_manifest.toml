@@ -7,6 +7,6 @@ tags = [ "Blastframe","Grease Pencil"]
 version = "1.0.20"
 blender_version_min = "4.2.0"
 maintainer = "Blastframe"
-website = "https://blastframe.com/product/groupify/"
+website = "https://github.com/blastframe/GP-Time-Offset-Duplicator"
 license = [ "SPDX:GPL-2.0-or-later",]
 copyright = [ "© 2025 Blastframe. All rights reserved.",]
