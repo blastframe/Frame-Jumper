@@ -307,7 +307,7 @@ class BLASTFRAME_OT_duplicate_time_offset_frame(Operator):
         # has been disabled and must be re-enabled after completing their edits.
         self.report(
             {"WARNING"},
-            f"Time offset disabled for {context.object.name}. Please re-enable it after editing.",
+            f"Time Offset Modifier disabled for {context.object.name}. Please re-enable it after editing.",
         )
 
         return {"FINISHED"}
