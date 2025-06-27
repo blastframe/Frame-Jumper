@@ -5,8 +5,7 @@ bl_info = {
     "blender": (3, 6, 0),
     "location": "Dopesheet Header",
     "description": (
-        "Duplicates the active Grease Pencil frame influenced by the Time Offset "
-        "modifier to a new frame for editing (compatible with GP v2 & GP v3)."
+        "Duplicates the active Grease Pencil frame or creates a blank keyframe - based on the frame referenced by the Time Offset modifier - to produce a new, editable frame. "
     ),
     "category": "Grease Pencil",
 }
@@ -66,7 +65,7 @@ def get_frame(layer, frame_number):
 
 
 def get_target_layer_items(_self, context):
-    """Enum items callback – list existing layers plus a 'New +' entry."""
+    """Enum items callback - list existing layers plus a 'New +' entry."""
     items = []
     obj = context.active_object
     if obj and obj.type in {"GPENCIL", "GREASEPENCIL"}:
@@ -223,7 +222,7 @@ class BLASTFRAME_OT_duplicate_time_offset_frame(Operator):
             except RuntimeError as err:
                 self.report(
                     {"WARNING"},
-                    "frames.copy() failed – duplicating strokes manually.",
+                    "frames.copy() failed - duplicating strokes manually.",
                 )
                 new_frame = dst_layer.frames.new(new_frame_number)
                 if src_frame:
@@ -328,10 +327,10 @@ class BLASTFRAME_OT_duplicate_time_offset_frame(Operator):
 
 def get_time_offset_modifier(obj):
     # --- Detect GP version and choose data path --------------------------------
-    if bpy.app.version >= (4, 3, 0):  # GP v3 – unified modifier stack
+    if bpy.app.version >= (4, 3, 0):  # GP v3 - unified modifier stack
         mods = obj.modifiers
         type_name = "GREASE_PENCIL_TIME"
-    else:  # GP v2 – dedicated GP modifiers
+    else:  # GP v2 - dedicated GP modifiers
         mods = getattr(obj, "grease_pencil_modifiers", [])
         type_name = "GP_TIME"
 
