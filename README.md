@@ -1,23 +1,36 @@
 # **GP Time Offset Duplicator**
 
-**GP Time Offset Duplicator** lets you temporarily step out of the timeline controlled by the Time Offset modifier—either duplicating the displayed frame or creating a blank keyframe—so you can create a new drawing without altering the ongoing keyframed animation.
+---
 
-- **Target an Existing Layer or Create a New One:**  
-  You can choose whether to:
+### What is the GP Time Offset Duplicator?
 
-  - **Duplicate the new keyframe on an existing layer,** placing the new drawing right where you want it, or
-  - **Create a new layer** specifically to hold the duplicated (or blank) keyframe, keeping your drawings neatly separated.
+Sometimes, while you're using that Time Offset modifier, you might want to draw something _new_ without messing up the awesome rigged animation you've already set up with a Time Offset Modifier. That's where the **GP Time Offset Duplicator** comes in!
 
-- **Duplicate or Create a Blank Keyframe:**  
-  The operator offers two modes:
+Think of it like this: The Time Offset modifier is showing you a specific drawing from your animation. The **GP Time Offset Duplicator** lets you "step out" of that view for a moment. You can either make a copy of the drawing you see or create a completely blank canvas, and then draw something brand new without changing your existing animation. How cool is that?
 
-  - **Duplicate the Active Frame:**  
-    It copies the frame currently referenced by the Time Offset modifier, preserving its drawing data as a starting point.
-  - **Create a Blank Keyframe:**  
-    Alternatively, you can opt to start with a clean slate. In this case, the operator creates a blank keyframe either on the destination layer or—if desired—on the original layer to hide its content. This ensures that the Grease Pencil only shows your new drawing.
+---
 
-- **Quick Re-enable:**  
-  After your new drawing is complete, you can easily re-enable the Time Offset modifier directly from the Dopesheet's Header. This lets you seamlessly return to the keyframed animation with your fresh adjustments integrated.
+### Where Can Your New Drawing Go?
+
+When you use this tool, you have a choice about where your new drawing will appear:
+
+- **Put it on an existing layer:** If you want your new drawing to be part of a layer you're already working on, you can do that! It will pop right into that layer.
+- **Create a brand new layer:** Sometimes, it's nice to keep your drawings super organized. This option lets you make a fresh, empty layer just for your new drawing. This keeps everything neat and tidy!
+
+---
+
+### Do You Want a Copy or a Clean Slate?
+
+The **GP Time Offset Duplicator** gives you two ways to start your new drawing:
+
+- **Duplicate the current drawing:** This is like taking a photocopy of the drawing the Time Offset modifier is currently showing you. You'll get an exact copy, and you can then draw on top of it or change it however you like. It's a great way to start if you want to build upon something already there.
+- **Create a blank drawing:** If you want to start completely from scratch, this is your option! It will give you an empty space to draw on. You can even choose to make the original drawing (the one the Time Offset modifier was showing) temporarily disappear so only your new drawing is visible. This makes sure you can focus entirely on your new creation.
+
+---
+
+### Getting Back to Your Animation
+
+Once you're done with your new drawing, don't worry! It's super easy to go back to your regular animation controlled by the Time Offset modifier. There's a quick button in the **Dopesheet's Header** (which is a part of Blender where you manage your animation frames) that lets you turn the Time Offset modifier back on. Then, your new drawing will fit perfectly into your ongoing animation!
 
 ### Video Tutorial
 
