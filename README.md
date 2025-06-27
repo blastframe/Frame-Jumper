@@ -39,47 +39,45 @@ For a quick demonstration of the add-on in action, watch the video below:
 
 By offering these options, **GP Time Offset Duplicator** provides a flexible, non-destructive workflow that adapts to your creative needs.
 
-## Features
-
-- **Jump Out of Timeline**: Temporarily exit the timeline controlled by the Time Offset modifier to create a new drawing without affecting the keyframed animation.
-- **Duplicate with Ease**: Quickly duplicate the active Grease Pencil frame influenced by the Time Offset modifier—or create a blank keyframe—so you have a new, editable drawing surface.
-- **Quick Re-enable**: Easily re-enable the Time Offset modifier directly from the Dopesheet's Header once your new drawing is complete.
-- **Compatibility**: Designed to work with both Grease Pencil v2 and v3 workflows.
+**Compatibility**: Designed to work with both Grease Pencil v2 and v3 workflows.
 
 ## Installation
 
 To install the **GP Time Offset Duplicator** add-on from the released zip file, follow these steps:
 
-1. **Download the Add-on Package:**
+## Installing **GP Time Offset Duplicator** in Blender 4.x via the _Extensions_ panel (ZIP workflow)
 
-   - Go to the [Releases](https://github.com/blastframe/GP-Time-Offset-Duplicator/releases) page of this repository.
-   - Download the latest `GP Time Offset Duplicator_vX.Y.Z.zip` file.
+> **Heads-up:** Blender 4 introduced the _Extensions_ manager, but you can still install any ZIP-based add-on/extension locally. These steps assume you already downloaded `GP_Time_Offset_Duplicator_vX.Y.Z.zip`.
 
-2. **Open Blender Preferences:**
+1. **Open Preferences → Extensions**
 
-   - Open Blender.
-   - From the main Blender menu, click on **Edit** and then select **Preferences**.
+   - In Blender’s top-bar choose **Edit ▸ Preferences…**.
+   - Click the **Extensions** tab in the sidebar.
 
-3. **Navigate to the Add-ons Tab:**
+2. **Switch to “Get Extensions”** (top of the window).
 
-   - In the Preferences window, click on the **Add-ons** tab.
+   - This page lists the on-line catalog, but it also hides the local install option we need.
 
-4. **Initiate Installation:**
+3. **Install from Disk**
 
-   - At the top right of the Add-ons panel, click the **Install...** button.
+   1. Press the Down Arrow menu in the top-right corner and pick **Install from Disk…**  
+      _Alternatively, drag-and-drop the ZIP onto the Extensions window._
+   2. In the file browser, locate and select `GP_Time_Offset_Duplicator_vX.Y.Z.zip`.
+   3. Click **Install Extension**. Blender copies the files into your _Local Repository_.
 
-5. **Locate the Zip File:**
+4. **Enable the Add-on**
 
-   - A file browser window will open.
-   - Navigate to the location on your computer where you saved the downloaded zip file.
+   - Still in Preferences ▶ Add-ons, go to the **Installed** tab.
+   - Tick the checkbox next to **GP Time Offset Duplicator** to load it.
 
-6. **Select and Install:**
+5. **Close Preferences**
+   - The tool now appears in the Dope-Sheet header, ready to duplicate Time-Offset frames.
 
-   - Select the zip file and click the **Install Add-on** button in the file browser.
+### Notes
 
-7. **Enable the Add-on:**
-   - Once installed, the add-on will appear in the list.
-   - Enable it by clicking the checkbox next to **GP Time Offset Duplicator**.
+- Installing from a ZIP adds the extension **locally**; it won’t auto-update thru the on-line catalog. :contentReference[oaicite:4]{index=4}
+- If you later need to remove it, return to **Installed**, click the arrow ▶ next to the name, and choose **Remove**.
+- For legacy 3.x add-ons that lack an `extension_manifest.json`, use **Add-ons ▸ Install from Disk…** instead. :contentReference[oaicite:5]{index=5}
 
 You are now ready to use the add-on from the **3D Viewport > Sidebar > GP Time Offset Tools** panel.
 
