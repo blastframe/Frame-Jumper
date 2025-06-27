@@ -6,7 +6,7 @@
 
 Sometimes, while you're using that Time Offset modifier, you might want to draw something _new_ without messing up the awesome rigged animation you've already set up with a Time Offset Modifier. That's where the **GP Time Offset Duplicator** comes in!
 
-Think of it like this: The Time Offset modifier is showing you a specific drawing from your animation. The **GP Time Offset Duplicator** lets you "step out" of that view for a moment. You can either make a copy of the drawing you see or create a completely blank canvas, and then draw something brand new without changing your existing animation. How cool is that?
+Think of it like this: The Time Offset modifier is showing you a specific drawing from your animation. The **GP Time Offset Duplicator** lets you "step out" of that view for a moment. You can either make a copy of the drawing you see or create a completely blank canvas, and then draw something brand new without changing your existing animation.
 
 ---
 
