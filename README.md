@@ -132,11 +132,5 @@ This will:
 
 ### Video Tutorial
 
-For a quick overview and demonstration of the add-on in action, watch the video below:
-
-<div align="center">
-  <video width="560" height="315" controls>
-    <source src="Grease Pencil Time Offset Duplicator.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+For a quick demonstration of the add-on in action, watch the video below:
+[![Grease Pencil Time Offset Duplicator](https://img.youtube.com/vi/TUGGjXJURmU/0.jpg)](https://www.youtube.com/watch?v=TUGGjXJURmU)
