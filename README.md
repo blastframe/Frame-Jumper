@@ -2,7 +2,7 @@
 
 ---
 
-### What is the Frame Jumper?
+### What is Frame Jumper?
 
 Sometimes, while you're using that Time Offset modifier, you might want to draw something _new_ without messing up the awesome rigged animation you've already set up with a Time Offset Modifier. That's where the **Frame Jumper** comes in!
 
