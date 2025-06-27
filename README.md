@@ -90,8 +90,7 @@ To install the **GP Time Offset Duplicator** add-on from the released zip file, 
 
 2. **Preparing for a New Drawn Frame:**
 
-   - When you reach a point in the animation where you need a newly drawn frame, open the sidebar (press `N` in the 3D Viewport) and navigate to the **GP Time Offset Tools** tab.
-   - Click the **Duplicate Time Offset Frame** button which shows as a Time Modifier icon in the header of the Dopesheet Editor. This operator will disable the active Grease Pencil object's Time Offset modifier and duplicate the currently displayed frame (the one being driven by keyframes) into a new frame.
+   - When you reach a point in the animation where you need a newly drawn frame, click the **Duplicate Time Offset Frame** button which shows as a Time Modifier icon in the header of the Dopesheet Editor. This operator will disable the active Grease Pencil object's Time Offset modifier and duplicate the currently displayed frame (the one being driven by keyframes) into a new frame.
    - Additionally, if enabled, it can create a blank keyframe on the source layer so that the original drawing does not show underneath.
 
 3. **Drawing the New Frame:**
