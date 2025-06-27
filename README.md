@@ -1,12 +1,12 @@
-# **GP Time Offset Duplicator**
+# **Frame Jumper**
 
 ---
 
-### What is the GP Time Offset Duplicator?
+### What is the Frame Jumper?
 
-Sometimes, while you're using that Time Offset modifier, you might want to draw something _new_ without messing up the awesome rigged animation you've already set up with a Time Offset Modifier. That's where the **GP Time Offset Duplicator** comes in!
+Sometimes, while you're using that Time Offset modifier, you might want to draw something _new_ without messing up the awesome rigged animation you've already set up with a Time Offset Modifier. That's where the **Frame Jumper** comes in!
 
-Think of it like this: The Time Offset modifier is showing you a specific drawing from your animation. The **GP Time Offset Duplicator** lets you "step out" of that view for a moment. You can either make a copy of the drawing you see or create a completely blank canvas, and then draw something brand new without changing your existing animation.
+Think of it like this: The Time Offset modifier is showing you a specific drawing from your animation. The **Frame Jumper** lets you "step out" of that view for a moment. You can either make a copy of the drawing you see or create a completely blank canvas, and then draw something brand new without changing your existing animation.
 
 ---
 
@@ -21,7 +21,7 @@ When you use this tool, you have a choice about where your new drawing will appe
 
 ### Do You Want a Copy or a Clean Slate?
 
-The **GP Time Offset Duplicator** gives you two ways to start your new drawing:
+The **Frame Jumper** gives you two ways to start your new drawing:
 
 - **Duplicate the current drawing:** This is like taking a photocopy of the drawing the Time Offset modifier is currently showing you. You'll get an exact copy, and you can then draw on top of it or change it however you like. It's a great way to start if you want to build upon something already there.
 - **Create a blank drawing:** If you want to start completely from scratch, this is your option! It will give you an empty space to draw on. You can even choose to make the original drawing (the one the Time Offset modifier was showing) temporarily disappear so only your new drawing is visible. This makes sure you can focus entirely on your new creation.
@@ -35,19 +35,19 @@ Once you're done with your new drawing, don't worry! It's super easy to go back 
 ### Video Tutorial
 
 For a quick demonstration of the add-on in action, watch the video below:
-[![Grease Pencil Time Offset Duplicator](https://img.youtube.com/vi/TUGGjXJURmU/0.jpg)](https://www.youtube.com/watch?v=TUGGjXJURmU)
+[![Frame Jumper](https://img.youtube.com/vi/TUGGjXJURmU/0.jpg)](https://www.youtube.com/watch?v=TUGGjXJURmU)
 
-By offering these options, **GP Time Offset Duplicator** provides a flexible, non-destructive workflow that adapts to your creative needs.
+By offering these options, **Frame Jumper** provides a flexible, non-destructive workflow that adapts to your creative needs.
 
 **Compatibility**: Designed to work with both Grease Pencil v2 and v3 workflows.
 
 ## Installation
 
-To install the **GP Time Offset Duplicator** add-on from the released zip file, follow these steps:
+To install the **Frame Jumper** add-on from the released zip file, follow these steps:
 
-## Installing **GP Time Offset Duplicator** in Blender 4.x via the _Extensions_ panel (ZIP workflow)
+## Installing **Frame Jumper** in Blender 4.x via the _Extensions_ panel (ZIP workflow)
 
-> **Heads-up:** Blender 4 introduced the _Extensions_ manager, but you can still install any ZIP-based add-on/extension locally. These steps assume you already downloaded `GP_Time_Offset_Duplicator_vX.Y.Z.zip`.
+> **Heads-up:** Blender 4 introduced the _Extensions_ manager, but you can still install any ZIP-based add-on/extension locally. These steps assume you already downloaded `Frame_Jumper_vX.Y.Z.zip`.
 
 1. **Open Preferences → Extensions**
 
@@ -62,13 +62,13 @@ To install the **GP Time Offset Duplicator** add-on from the released zip file, 
 
    1. Press the Down Arrow menu in the top-right corner and pick **Install from Disk…**  
       _Alternatively, drag-and-drop the ZIP onto the Extensions window._
-   2. In the file browser, locate and select `GP_Time_Offset_Duplicator_vX.Y.Z.zip`.
+   2. In the file browser, locate and select `Frame_Jumper_vX.Y.Z.zip`.
    3. Click **Install Extension**. Blender copies the files into your _Local Repository_.
 
 4. **Enable the Add-on**
 
    - Still in Preferences ▶ Add-ons, go to the **Installed** tab.
-   - Tick the checkbox next to **GP Time Offset Duplicator** to load it.
+   - Tick the checkbox next to **Frame Jumper** to load it.
 
 5. **Close Preferences**
    - The tool now appears in the Dope-Sheet header, ready to duplicate Time-Offset frames.
@@ -102,7 +102,7 @@ To install the **GP Time Offset Duplicator** add-on from the released zip file, 
    - Once you’re satisfied with your new frame, re-enable the Time Offset modifier (for example, by using the viewport toggle button provided by the add-on).
    - Your animation will now resume its keyframed control, but with the new frame integrated into the sequence.
 
-By following these steps, you efficiently use **GP Time Offset Duplicator** to integrate hand-drawn modifications into your animated Grease Pencil layers.
+By following these steps, you efficiently use **Frame Jumper** to integrate hand-drawn modifications into your animated Grease Pencil layers.
 
 ## Troubleshooting
 
@@ -131,13 +131,13 @@ To create a new release, follow these steps in your repository's root:
 ```bash
 git tag v1.0.0
 git push --tags
-zip -r "GP_Time_Offset_Duplicator_v1.0.0.zip" *
-mv "GP_Time_Offset_Duplicator_v1.0.0.zip" ~/Downloads/
+zip -r "Frame_Jumper_v1.0.0.zip" *
+mv "Frame_Jumper_v1.0.0.zip" ~/Downloads/
 ```
 
 This will:
 
 - Create a tag (e.g. `v1.0.0`) marking the current commit as a release.
 - Push the tag to GitHub so that it appears in the Releases section.
-- Package all repository files into a zip file named `GP Time Offset Duplicator_v1.0.0.zip` for users to download.
+- Package all repository files into a zip file named `Frame Jumper_v1.0.0.zip` for users to download.
 - Move the generated zip file to your Downloads folder.
