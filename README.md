@@ -90,6 +90,8 @@ To install the **Frame Jumper** add-on from the released zip file, follow these 
    - Ensure your Grease Pencil object is in the scene.
    - Apply a Time Offset modifier to the object. This modifier (driven by keyframes) controls which frame is displayed during playback.
 
+![Dopesheet Header](img/Dopesheet.jpeg)
+
 2. **Preparing for a New Drawn Frame:**
 
    - When you reach a point in the animation where you need a newly drawn frame, click the **Duplicate Time Offset Frame** button which shows as a Time Modifier icon in the header of the Dopesheet Editor. This operator will disable the active Grease Pencil object's Time Offset modifier and duplicate the currently displayed frame (the one being driven by keyframes) into a new frame.
