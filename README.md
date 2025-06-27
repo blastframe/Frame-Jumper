@@ -75,9 +75,9 @@ To install the **GP Time Offset Duplicator** add-on from the released zip file, 
 
 ### Notes
 
-- Installing from a ZIP adds the extension **locally**; it won’t auto-update thru the on-line catalog. :contentReference[oaicite:4]{index=4}
-- If you later need to remove it, return to **Installed**, click the arrow ▶ next to the name, and choose **Remove**.
-- For legacy 3.x add-ons that lack an `extension_manifest.json`, use **Add-ons ▸ Install from Disk…** instead. :contentReference[oaicite:5]{index=5}
+- Installing from a ZIP adds the extension **locally**; it won’t auto-update thru the on-line catalog.
+- If you later need to remove it, return to **Installed**, click the Down Arrow next to the name, and choose **Remove**.
+- For legacy 3.x add-ons that lack an `extension_manifest.json`, use **Add-ons ▸ Install from Disk…** instead.
 
 You are now ready to use the add-on from the **3D Viewport > Sidebar > GP Time Offset Tools** panel.
 
