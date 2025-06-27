@@ -29,13 +29,13 @@ jobs:
       - name: Create zip archive
         run: |
           addon_version=${{ steps.get_version.outputs.addon_version }}
-          zip_file="GP Time Offset Duplicator_v${addon_version}.zip"
+          zip_file="Frame_Jumper_v${addon_version}.zip"
           echo "Creating ${zip_file}"
           zip -r $zip_file . -i "*.py" "*.toml" # include necessary files (adjust as needed)
 
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          files: GP_Time_Offset_Duplicator_v*.zip
+          files: Frame_Jumper_v*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,12 +1,12 @@
 schema_version = "1.0.0"
-id = "gp_time_offset_duplicator"
-name = "GP Time Offset Duplicator"
+id = "framejumper"
+name = "Frame Jumper"
 tagline = "Duplicates the active Grease Pencil frame influenced by the Time Offset modifier to a new editable frame"
 type = "add-on"
 tags = [ "Blastframe","Grease Pencil"]
 version = "1.0.0"
 blender_version_min = "4.2.0"
 maintainer = "Blastframe"
-website = "https://github.com/blastframe/GP-Time-Offset-Duplicator"
+website = "https://blastframe.com/product/frame-jumper/"
 license = [ "SPDX:GPL-2.0-or-later",]
 copyright = [ "© 2025 Blastframe. All rights reserved.",]

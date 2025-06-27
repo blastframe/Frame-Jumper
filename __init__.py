@@ -1,5 +1,5 @@
 bl_info = {
-    "name": "GP Time Offset Duplicator",
+    "name": "Frame Jumper",
     "author": "@blastframe, @sketchysquirrelanimation",
     "version": (1, 0, 0),
     "blender": (3, 6, 0),
@@ -7,8 +7,8 @@ bl_info = {
     "description": (
         "Duplicates the active Grease Pencil frame or creates a blank keyframe - based on the frame referenced by the Time Offset modifier - to produce a new, editable frame."
     ),
-    "doc_url": "https://github.com/blastframe/GP-Time-Offset-Duplicator",
-    "tracker_url": "https://github.com/blastframe/GP-Time-Offset-Duplicator",
+    "doc_url": "https://blastframe.com/docs/graphkit/",
+    "tracker_url": "https://blastframe.com/contact/",
     "category": "Grease Pencil",
 }
 
@@ -16,7 +16,7 @@ import bpy
 from bpy.types import Operator, AddonPreferences, DOPESHEET_HT_header
 from bpy.props import EnumProperty, BoolProperty
 from bpy.utils import register_class, unregister_class
-
+from .icons.custom_icons import get_icon
 
 # ------------------------------------------------------------------------
 # Generic helpers
@@ -111,7 +111,7 @@ def get_debug_mode() -> bool:
     """Return the 'debug_mode' flag from this add-on’s preferences."""
 
     # ⓐ  the module name *is* the add-on ID when it sits in __init__.py
-    addon_id = "gp_time_offset_duplicator"
+    addon_id = "framejumper"
 
     prefs = None
     for a in bpy.context.preferences.addons:
@@ -376,13 +376,24 @@ class BLASTFRAME_OT_duplicate_time_offset_frame_preferences(AddonPreferences):
 
     debug_mode: BoolProperty(
         name="Debug Mode",
-        description="Enable additional debug output for GP Time Offset Duplicator",
+        description="Enable additional debug output for Frame Jumper",
         default=False,
     )
 
     def draw(self, context):
         layout = self.layout
         layout.prop(self, "debug_mode")
+        row = layout.row(align=True)
+        row.scale_y = 1.3
+
+        row.operator(
+            "wm.url_open",
+            text="Blastframe",
+            icon_value=get_icon("Blastframe_Logo_White"),
+        ).url = "https://blastframe.com"
+        row.operator(
+            "wm.url_open", text="YouTube", icon_value=get_icon("YouTube")
+        ).url = "https://www.youtube.com/@blastframe"
 
 
 # ------------------------------------------------------------------------
@@ -396,6 +407,9 @@ classes = (
 
 
 def register():
+    from .icons.custom_icons import register_custom_icons
+
+    register_custom_icons()
     for cls in classes:
         register_class(cls)
     DOPESHEET_HT_header.append(draw_timeoffset_buttons)
@@ -405,6 +419,10 @@ def unregister():
     for cls in reversed(classes):
         unregister_class(cls)
     DOPESHEET_HT_header.remove(draw_timeoffset_buttons)
+
+    from .icons.custom_icons import unregister_custom_icons
+
+    unregister_custom_icons()
 
 
 if __name__ == "__main__":
