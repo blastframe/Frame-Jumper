@@ -1,6 +1,6 @@
 # **Frame Jumper**
 
-![Frame Jumper](img/Frame_Jumper.jpg)
+![Frame Jumper](img/Frame_Jumper.svg)
 
 ---
 
