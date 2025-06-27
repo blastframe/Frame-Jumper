@@ -1,0 +1,41 @@
+name: Build Add-On Package
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Read version from blender_manifest.toml
+        id: get_version
+        run: |
+          import toml, sys
+          config = toml.load("blender_manifest.toml")
+          version = config.get("version", "0.0.0")
+          print(f"::set-output name=addon_version::{version}")
+        shell: python
+
+      - name: Create zip archive
+        run: |
+          addon_version=${{ steps.get_version.outputs.addon_version }}
+          zip_file="GP Time Offset Duplicator_v${addon_version}.zip"
+          echo "Creating ${zip_file}"
+          zip -r $zip_file . -i "*.py" "*.toml" # include necessary files (adjust as needed)
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v1
+        with:
+          files: GP\ Time\ Offset\ Duplicator_v*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
