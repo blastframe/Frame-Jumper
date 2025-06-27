@@ -49,28 +49,27 @@ You are now ready to use the add-on from the **3D Viewport > Sidebar > GP Time O
 
 ### Step-by-Step Guide
 
-1. **Setup Your Grease Pencil Object:**
+1. **Setup Your Scene:**
 
-   - Create or select an existing Grease Pencil object in your scene.
-   - Apply a Time Offset modifier if required.
+   - Ensure your Grease Pencil object is in the scene.
+   - Apply a Time Offset modifier to the object. This modifier (driven by keyframes) controls which frame is displayed during playback.
 
-2. **Activate the Frame:**
+2. **Preparing for a New Drawn Frame:**
 
-   - In the Grease Pencil timeline or on the canvas, choose the frame you wish to duplicate.
+   - When you reach a point in the animation where you need a newly drawn frame, open the sidebar (press `N` in the 3D Viewport) and navigate to the **GP Time Offset Tools** tab.
+   - Click the **Duplicate Time Offset Frame** button which shows as a Time Modifier icon in the header of the Dopesheet Editor. This operator will disable the active Grease Pencil object's Time Offset modifier and duplicate the currently displayed frame (the one being driven by keyframes) into a new frame.
+   - Additionally, if enabled, it can create a blank keyframe on the source layer so that the original drawing does not show underneath.
 
-3. **Duplicate the Frame:**
+3. **Drawing the New Frame:**
 
-   - Open the sidebar (Press `N` in the 3D Viewport) and navigate to the **GP Time Offset Tools** tab.
-   - Click on the **Duplicate Frame** button.
-   - The add-on will duplicate the active frame (while copying ease data, handle angles, and interpolation settings) into a new frame for editing.
+   - With the modifier now temporarily disabled, switch to Draw mode and create your new artwork on the duplicated frame.
+   - The new frame is independent—allowing you to make changes without affecting the original keyframed animation.
 
-4. **Edit the Duplicated Frame:**
+4. **Re-enable the Time Offset Modifier:**
+   - Once you’re satisfied with your new frame, re-enable the Time Offset modifier (for example, by using the viewport toggle button provided by the add-on).
+   - Your animation will now resume its keyframed control, but with the new frame integrated into the sequence.
 
-   - The duplicated frame will appear in the timeline as a separate frame.
-   - Edit the new frame as desired without affecting the original frame.
-
-5. **Saving Your Work:**
-   - Once satisfied, save your Blender file. The add-on does not automatically commit changes, so manual saving is required.
+By following these steps, you efficiently use **GP Time Offset Duplicator** to integrate hand-drawn modifications into your animated Grease Pencil layers.
 
 ## Troubleshooting
 
