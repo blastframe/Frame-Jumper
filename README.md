@@ -19,6 +19,11 @@
 - **Quick Re-enable:**  
   After your new drawing is complete, you can easily re-enable the Time Offset modifier directly from the Dopesheet's Header. This lets you seamlessly return to the keyframed animation with your fresh adjustments integrated.
 
+### Video Tutorial
+
+For a quick demonstration of the add-on in action, watch the video below:
+[![Grease Pencil Time Offset Duplicator](https://img.youtube.com/vi/TUGGjXJURmU/0.jpg)](https://www.youtube.com/watch?v=TUGGjXJURmU)
+
 By offering these options, **GP Time Offset Duplicator** provides a flexible, non-destructive workflow that adapts to your creative needs.
 
 ## Features
@@ -129,8 +134,3 @@ This will:
 - Push the tag to GitHub so that it appears in the Releases section.
 - Package all repository files into a zip file named `GP Time Offset Duplicator_v1.0.0.zip` for users to download.
 - Move the generated zip file to your Downloads folder.
-
-### Video Tutorial
-
-For a quick demonstration of the add-on in action, watch the video below:
-[![Grease Pencil Time Offset Duplicator](https://img.youtube.com/vi/TUGGjXJURmU/0.jpg)](https://www.youtube.com/watch?v=TUGGjXJURmU)
