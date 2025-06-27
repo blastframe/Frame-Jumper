@@ -91,3 +91,21 @@ Contributions, suggestions, and fixes are welcome! Feel free to fork this reposi
 - Inspired by the need for flexible Grease Pencil editing tools.
 
 ---
+
+### Tagging and Packaging a Release
+
+To create a new release, follow these steps in your repository's root:
+
+```bash
+git tag v1.0.0
+git push --tags
+zip -r "GP Time Offset Duplicator_v1.0.0.zip" *
+mv "GP Time Offset Duplicator_v1.0.0.zip" ~/Downloads/
+```
+
+This will:
+
+- Create a tag (e.g. `v1.0.0`) marking the current commit as a release.
+- Push the tag to GitHub so that it appears in the Releases section.
+- Package all repository files into a zip file named `GP Time Offset Duplicator_v1.0.0.zip` for users to download.
+- Move the generated zip file to your Downloads folder.
