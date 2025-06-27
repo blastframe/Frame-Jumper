@@ -1,7 +1,7 @@
 bl_info = {
     "name": "GP Time Offset Duplicator",
     "author": "@blastframe, @sketchysquirrelanimation",
-    "version": (1, 0, 20),
+    "version": (1, 0, 0),
     "blender": (3, 6, 0),
     "location": "Dopesheet Header",
     "description": (
@@ -28,7 +28,11 @@ def gp_version_props():
         return {
             "object_type": "GREASEPENCIL",
             "time_offset_modifier_type": "GREASE_PENCIL_TIME",
+            "draw_mode": "PAINT_GREASE_PENCIL",
             "edit_mode": "EDIT",
+            "sculpt_mode": "SCULPT_GREASE_PENCIL",
+            "vertex_mode": "VERTEX_GREASE_PENCIL",
+            "weight_mode": "WEIGHT_GREASE_PENCIL",
             "layer_name_attr": "name",
             "frames_copy_mode": "BY_NUMBER",  # v3 copy( from_frame_number, to_frame_number )
             "select_all_op": "grease_pencil.select_all",
@@ -38,7 +42,11 @@ def gp_version_props():
     return {
         "object_type": "GPENCIL",
         "time_offset_modifier_type": "GP_TIME",
+        "draw_mode": "PAINT_GPENCIL",
         "edit_mode": "EDIT_GPENCIL",
+        "sculpt_mode": "SCULPT_GPENCIL",
+        "vertex_mode": "VERTEX_GPENCIL",
+        "weight_mode": "WEIGHT_GPENCIL",
         "layer_name_attr": "info",
         "frames_copy_mode": "BY_OBJECT",  # v2 copy( frame )
         "select_all_op": "gpencil.select_all",
@@ -46,19 +54,15 @@ def gp_version_props():
     }
 
 
-def get_or_create_frame(layer, frame_number):
+def get_frame(layer, frame_number):
     """Gets an existing frame or creates a new one, handling GPv2 and GPv3 differences."""
     if bpy.app.version >= (4, 3, 0):
         new_frame = layer.get_frame_at(frame_number)
-        if not new_frame:
-            layer.active_frame.clear()
-            new_frame = layer.get_frame_at(frame_number)
         return new_frame
     else:
         for f in layer.frames:
             if f.frame_number == frame_number:
                 return f
-        return layer.frames.new(frame_number)
 
 
 def get_target_layer_items(_self, context):
@@ -198,22 +202,12 @@ class BLASTFRAME_OT_duplicate_time_offset_frame(Operator):
         )
 
         # Source frame
-        src_frame = get_or_create_frame(src_layer, offset_frame)
+        src_frame = get_frame(src_layer, offset_frame)
 
         original_active = gp_data.layers.active
         gp_data.layers.active = dst_layer
 
-        if self.create_blank_keyframe:
-            # Ensure the destination layer has a blank keyframe at the new frame.
-            new_frame = get_or_create_frame(src_layer, new_frame_number)
-            name_attr = gp_version_props()["layer_name_attr"]
-            layer_name = getattr(src_layer, name_attr)
-            if debug_mode:
-                print(new_frame)
-                print(
-                    f"DEBUG: Created new frame {new_frame_number} on layer '{layer_name}'"
-                )
-        else:
+        if not self.create_blank_keyframe:
             try:
                 if src_frame:
                     if gp["frames_copy_mode"] == "BY_NUMBER":
@@ -265,7 +259,7 @@ class BLASTFRAME_OT_duplicate_time_offset_frame(Operator):
             and self.create_blank_keyframe_on_source
         ):
             # Try to retrieve an existing keyframe on the source layer at the modifier's offset frame.
-            src_key = get_or_create_frame(src_layer, offset_frame)
+            src_key = get_frame(src_layer, offset_frame)
             if src_key:
                 if hasattr(src_key, "drawing") and src_key.drawing:
                     # If the keyframe exists and has drawing data, clear its strokes to create a blank keyframe.
@@ -283,15 +277,27 @@ class BLASTFRAME_OT_duplicate_time_offset_frame(Operator):
 
         # Set the current scene frame to the new frame number so the user sees the newly duplicated frame.
         context.scene.frame_current = new_frame_number
-        # Switch the object to the appropriate edit mode (as defined by the GP version properties).
-        bpy.ops.object.mode_set(mode=gp["edit_mode"])
 
-        # Dynamically retrieve and execute the "select all" operator based on the GP version properties.
-        op_path = gp["select_all_op"].split(".")
-        op = bpy.ops
-        for part in op_path:
-            op = getattr(op, part)
-        op(action="SELECT")
+        if self.create_blank_keyframe:
+            # Switch the object to the appropriate edit mode (as defined by the GP version properties).
+            bpy.ops.object.mode_set(mode=gp["draw_mode"])
+            # Ensure the destination layer has a blank keyframe at the new frame.
+            new_frame = src_layer.frames.new(new_frame_number)
+            name_attr = gp["layer_name_attr"]
+            layer_name = getattr(src_layer, name_attr)
+            if debug_mode:
+                print(
+                    f"DEBUG: Created new frame {new_frame_number} on layer '{layer_name}'"
+                )
+        else:
+            # Switch the object to the appropriate edit mode (as defined by the GP version properties).
+            bpy.ops.object.mode_set(mode=gp["edit_mode"])
+            # Dynamically retrieve and execute the "select all" operator based on the GP version properties.
+            op_path = gp["select_all_op"].split(".")
+            op = bpy.ops
+            for part in op_path:
+                op = getattr(op, part)
+            op(action="SELECT")
 
         # Refresh the UI to ensure all changes are immediately visible.
         refresh()
@@ -302,6 +308,7 @@ class BLASTFRAME_OT_duplicate_time_offset_frame(Operator):
             {"WARNING"},
             f"Time offset disabled for {context.object.name}. Please re-enable it after editing.",
         )
+
         return {"FINISHED"}
 
     def invoke(self, context, _event):
