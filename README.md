@@ -88,7 +88,7 @@ To install the **Frame Jumper** add-on from the released zip file, follow these 
 1. **Setup Your Scene:**
 
    - Ensure your Grease Pencil object is in the scene.
-   - Apply a Time Offset modifier to the object. This modifier (driven by keyframes) controls which frame is displayed during playback.
+   - Apply a Time Offset modifier to the object. This modifier (driven by keyframes) controls which frame is displayed during playback. Change the Time Offset Modifier's Mode to _Fixed Frame_.
 
 ![Dopesheet Header](img/Dopesheet.jpeg)
 
